@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<style>
+table, th, td 
+</style>
+	<link rel ="stylesheet"type="text/css" href="../static/main.css">
+		<title>{{title}}
+		</title>
+
+	</head>
+
+	<body background="../static/bg.jpg" class="body"style="background-color:cyan;font-size:200%;">
+
+		{% if name %}
+		<h1 class= "tit"> {{name}}</h1>
+		{% else %}
+		<h1 class= "tit"> omar souleiman </h1>
+		{% endif %}
+
+
+		<div style="background-color:gray;color:white;padding:5px;">
+		<table style="width:100%">
+	  	<tr class="arori">
+	    <th><div > <a href= "about.html" style="text-decoration: none;"><p class="par3"> about<p></a></div> </th>
+	    <th><div >    <a href= "albums.html" style="text-decoration: none;"><p class="par"> albums<p></a> </div> </th> 
+	    <th><div ><a href="list.html"style="text-decoration: none;"><p class="par">list</p></a></div></th>
+	    </tr>
+	</table>
+</div>
+	
+        
+		 <img src="../static/images.jpeg" width="228" height="128" style= "float:right; position: absolute; Bottom:80%; margin-left:5%;" >
+
+	
+	{% block body %}{% endblock %}	 
+<hr>
+		<a href="https://www.youtube.com/watch?v=lVlgMEFu1PI" style="color:black; text-decoration: none;"><p class="par">warni warni click here </p></a>
+<hr>
+<p class="par1"> copyrights </p>
+	<hr>	
+		
+
+	</body>
+
+
+
+
+
+
+
+</html>
+
+
+

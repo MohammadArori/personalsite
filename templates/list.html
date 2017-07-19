@@ -1,0 +1,16 @@
+<html>
+</body>
+{% if display== true %}
+	<ol>
+	{% for name in list%}
+<li> {{name}}</li>
+{%endfor%}
+	</ol>
+
+{% else %} /
+<p> Display is false </p>
+<img src="../static/images.jpeg" width="228" height="128" style= "float:right; position: absolute; Bottom:80%; margin-left:5%;" >
+
+</body>
+</html>
+{% endif %}
