@@ -22,7 +22,7 @@ def albums():
 @app.route('/list.html')
 def listEX():
 	test= ["riff cohen" , "naom chomsky" , "steven hawkings" , "van gogh" , "fadi abuhomos"]
-	display= False
+	display= True
 	return render_template("list.html", display=display, list=test, )
 
 
