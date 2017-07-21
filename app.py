@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 import random
 app= Flask(__name__)
 
@@ -19,11 +19,46 @@ def albums():
 	return render_template("albums.html", title= "albums", )
 
 
-@app.route('/list.html')
+@app.route('/list.html', methods =["GET", "POST"])
 def listEX():
-	test= ["riff cohen" , "naom chomsky" , "steven hawkings" , "van gogh" , "fadi abuhomos"]
-	display= True
-	return render_template("list.html", display=display, list=test, )
+
+	
+	if request.method =="GET":
+		return render_template("list.html") 
+	else:
+		form =request.form
+		if request.method =="POST":
+			name = form["Name"]
+			email =form["Email"]
+			message=form["Message"]
+			return render_template("contact data.html", Name= name, Email= email, Message=message)
+
+
+	
+
+
+
+
+
+	#display=display, list=test)
+	
+	#	test= ["riff cohen" , "naom chomsky" , "steven hawkings" , "van gogh" , "fadi abuhomos"]
+		#display= True
+	#else: 
+
+
+	
+	
+
+
+
+
+
+
+
+
+
+
 
 
 
